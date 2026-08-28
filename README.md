@@ -15,7 +15,7 @@ Este repositório contém a resolução das questões da atividade prática da d
 
 O vídeo com o passo a passo da criação da Máquina Virtual na nuvem (IaaS) e a execução/explicação dos códigos das 6 questões foi publicado no YouTube:
 
-* ▶️ **Link do Vídeo no YouTube:** [https://www.youtube.com/watch?v=LINK_DO_VIDEO](https://www.youtube.com/watch?v=LINK_DO_VIDEO) *(substitua pelo link do vídeo)*
+* ▶️ **Link do Vídeo no YouTube:** [https://youtu.be/2Xp9baBAj30](https://www.youtube.com/watch?v=2Xp9baBAj30)
 
 ### Divisão das Apresentações:
 * **Criação e Configuração da VM (IaaS):** Kaio França e Mateus Neri
