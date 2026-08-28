@@ -11,16 +11,23 @@ As soluções foram organizadas dentro do diretório `questoes/`, separadas por 
 ```text
 questoes/
 ├── questao01/
-│   
+│   ├── MinhaThread.java
+│   └── RESPOSTAS.md
 ├── questao02/
-│   
+│   ├── Contador.java
+│   └── RESPOSTAS.md
 ├── questao03/
-│   
+│   ├── ExemploThreads.java
+│   └── RESPOSTAS.md
 ├── questao04/
-│   
+│   ├── Principal.java
+│   └── RESPOSTAS.md
 ├── questao05/
-│   
+│   ├── Principal.java
+│   └── RESPOSTAS.md
 └── questao06/
+    ├── Principal.java
+    └── RESPOSTAS.md
 ```
 
 ## Como Compilar e Executar os Códigos
