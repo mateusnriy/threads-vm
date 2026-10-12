@@ -17,6 +17,7 @@ Este repositório centraliza os trabalhos, projetos e atividades práticas desen
 | :--- | :--- | :---: | :---: |
 | **01. Programação com Threads em Java & Nuvem (IaaS)** | Estudo aprofundado de concorrência, criação de threads, ciclo de vida, estados e sincronização em Java, com deploy em VM na nuvem. | [Acessar](./trabalho-threads-vm/) | [▶️ Assistir no YouTube](https://www.youtube.com/watch?v=2Xp9baBAj30) |
 | **02. Aplicação Cliente-Servidor Concorrente em VMs (TCP e UDP)** | Aplicação distribuída com servidores multithreaded TCP e UDP para processamento concorrente e telemetria entre múltiplas VMs. | [Acessar](./trabalho-vms-aplicacao/) | [▶️ Assistir no YouTube](https://www.youtube.com/watch?v=h8lpCKpLrb8) |
+| **03. Aplicação RPC Síncrona e Assíncrona Multithread em VMs** | Aplicação distribuída em Java RMI cobrindo chamadas remotas síncronas bloqueantes, assíncronas com Futures e concorrência multithread no servidor em 3 VMs. | [Acessar](./trabalho-vms-rpc/) | [▶️ Assistir no YouTube (Em breve)](./trabalho-vms-rpc/README.md) |
 
 ---
 
@@ -35,6 +36,16 @@ Este repositório centraliza os trabalhos, projetos e atividades práticas desen
   * **Servidor e Cliente UDP:** Envio de telemetria/status de máquina via datagramas na porta `5001`, com workers assíncronos e controle de confirmação com timeout (**ACK**).
 * **Infraestrutura:** Configuração de rede distribuída entre múltiplas Máquinas Virtuais (VMs) na nuvem/rede local.
 * **Documentação Detalhada:** Consulte o [README do Trabalho 02](./trabalho-vms-aplicacao/README.md).
+
+### ⚡ [Trabalho 03: Aplicação RPC Síncrona e Assíncrona Multithread em VMs](./trabalho-vms-rpc/)
+* **Foco:** Chamada de Procedimento Remoto (RPC), Java RMI, Multithreading no servidor e Futures no cliente.
+* **Conteúdo:**
+  * **Serviços Remotos:** Operações de cálculo simples, processamento demorado artificialmente controlado e processamento de coleção agregador.
+  * **Parte I (Síncrona):** Cliente com espera bloqueante de I/O e log de tempos de resposta.
+  * **Parte II (Assíncrona):** Cliente não-bloqueante executando tarefas locais paralelas com `CompletableFuture`.
+  * **Concorrência Simultânea:** Execução simultânea a partir da VM2 (10s) e VM3 (5s) demonstrando processamento multithread do servidor.
+* **Infraestrutura:** Mesma topologia corporativa de 3 VMs (VM1 Gateway/DHCP/Servidor, VM2 Cliente 1, VM3 Cliente 2).
+* **Documentação Detalhada:** Consulte o [README do Trabalho 03](./trabalho-vms-rpc/README.md) e o [Plano de Desenvolvimento da Dupla](./trabalho-vms-rpc/PLANO_DESENVOLVIMENTO.md).
 
 ---
 
@@ -60,6 +71,21 @@ threads-vm/
 │   │   └── ServidorUDP.java         # Servidor multithreaded UDP (Porta 5001)
 │   └── README.md                    # Documentação do Trabalho 02
 │
+├── trabalho-vms-rpc/                # Trabalho 03 - Aplicação RPC (Síncrono e Assíncrono)
+│   ├── Clientes/
+│   │   ├── ClienteSincrono.java     # Parte I: Terminal Caixa síncrono (10s)
+│   │   ├── ClienteAssincrono.java   # Parte II: Terminal Caixa assíncrono com Future
+│   │   ├── SimuladorConcorrencia.java # Simulação concorrente Caixa 1 vs Caixa 2
+│   │   ├── ServicoRemoto.java       # Interface RMI dos contratos bancários
+│   │   └── ResultadoBalancete.java  # Objeto DTO de balancete consolidado
+│   ├── Servidor/
+│   │   ├── ServidorRPC.java         # Publicação RMI multithread na porta 1099
+│   │   ├── ServicoRemotoImpl.java   # Implementação com logs da thread atendente
+│   │   ├── ServicoRemoto.java       # Interface RMI dos contratos bancários
+│   │   └── ResultadoBalancete.java  # Objeto DTO de balancete consolidado
+│   ├── PLANO_DESENVOLVIMENTO.md     # Plano da dupla, roteiro de vídeo e questões
+│   └── README.md                    # Instruções de compilação, execução e testes
+│
 └── README.md                        # Documentação Geral / Repositório Central
 ```
 
@@ -68,6 +94,7 @@ threads-vm/
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
 * **Linguagem:** [Java (JDK 8+)](https://www.oracle.com/java/)
-* **Redes & Concorrência:** Java Sockets (`ServerSocket`, `Socket`, `DatagramSocket`, `DatagramPacket`), Java Threads (`Thread`, `Runnable`)
-* **Infraestrutura:** Máquinas Virtuais (VMs), Cloud IaaS, Redes Locais Virtuais
+* **Paradigmas Distribuídos:** RPC (Java RMI - `Remote`, `UnicastRemoteObject`, `LocateRegistry`), Sockets (`ServerSocket`, `DatagramSocket`), Java Concurrency (`CompletableFuture`, `Thread`, `Runnable`)
+* **Infraestrutura:** Máquinas Virtuais (VMs), Hypervisors (VirtualBox, VMware, Hyper-V, Proxmox), Roteamento e DHCP Linux
 * **Controle de Versão:** Git & GitHub
+
