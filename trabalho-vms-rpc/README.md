@@ -17,7 +17,7 @@ O projeto foi contextualizado em um cenário corporativo real de **Core Banking 
 
 O vídeo com o passo a passo da infraestrutura de rede, compilação, execução concorrente dos clientes síncrono e assíncrono e discussão das respostas avaliativas está disponível em:
 
-* ▶️ **Link do Vídeo no YouTube:** [Adicione aqui o link do vídeo gravado]
+* ▶️ **Link do Vídeo:** [Vídeo](https://canva.link/rplwqs0789rnevl)
 
 ---
 
