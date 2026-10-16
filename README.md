@@ -17,7 +17,7 @@ Este repositório centraliza os trabalhos, projetos e atividades práticas desen
 | :--- | :--- | :---: | :---: |
 | **01. Programação com Threads em Java & Nuvem (IaaS)** | Estudo aprofundado de concorrência, criação de threads, ciclo de vida, estados e sincronização em Java, com deploy em VM na nuvem. | [Acessar](./trabalho-threads-vm/) | [▶️ Assistir no YouTube](https://www.youtube.com/watch?v=2Xp9baBAj30) |
 | **02. Aplicação Cliente-Servidor Concorrente em VMs (TCP e UDP)** | Aplicação distribuída com servidores multithreaded TCP e UDP para processamento concorrente e telemetria entre múltiplas VMs. | [Acessar](./trabalho-vms-aplicacao/) | [▶️ Assistir no YouTube](https://www.youtube.com/watch?v=h8lpCKpLrb8) |
-| **03. Aplicação RPC Síncrona e Assíncrona Multithread em VMs** | Aplicação distribuída em Java RMI cobrindo chamadas remotas síncronas bloqueantes, assíncronas com Futures e concorrência multithread no servidor em 3 VMs. | [Acessar](./trabalho-vms-rpc/) | [▶️ Assistir ao vídeo](https://drive.google.com/drive/folders/1cjk7zGH5zkfAC9y20gmzN5gD1Hf_X6CF?usp=sharing) |
+| **03. Aplicação RPC Síncrona e Assíncrona Multithread em VMs** | Aplicação distribuída em Java RMI cobrindo chamadas remotas síncronas bloqueantes, assíncronas com Futures e concorrência multithread no servidor em 3 VMs. | [Acessar](./trabalho-vms-rpc/) | [▶️ Assistir ao vídeo](https://canva.link/rplwqs0789rnevl) |
 
 ---
 
